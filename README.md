@@ -4,11 +4,11 @@ description: Tips and tricks for Linux Privilege Escalation
 
 # Linux PrivEsc
 
-### Things to Check
+## Things to Check
 
 Before proceeding further, it is always a good idea to just poke around the system to see what we can do.
 
-#### List sudo permissions
+### List sudo permissions
 
 Running `sudo -l` should tell you what command current user can run as `root`.
 
@@ -23,7 +23,7 @@ sudo -l
 #     (ALL : ALL) ALL
 ```
 
-### Interesting Binaries
+## Interesting Binaries
 
 There are some programs that's quite interesting and worth a look to see if you can exploit them.
 
