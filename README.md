@@ -6,3 +6,9 @@ coverY: -69.09063893016345
 
 # defr0st
 
+## whoami
+
+I am `defr0st`. Professionally I am a software engineer, but I love hacking and penetration testing.
+
+
+
