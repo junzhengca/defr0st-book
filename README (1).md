@@ -29,5 +29,9 @@ There are some programs that's quite interesting and worth a look to see if you 
 
 [dstat.md](linux-privesc/dstat.md "mention")
 
+## Tricks
+
+[yaml-deserialization-attack.md](linux-privesc/yaml-deserialization-attack.md "mention")
+
 
 
