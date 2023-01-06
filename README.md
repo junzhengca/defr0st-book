@@ -10,5 +10,7 @@ coverY: -69.09063893016345
 
 I am `defr0st`. Professionally I am a software engineer, but I love hacking and penetration testing.
 
+I regularly post new contents here as I discover new bugs and vulnerabilities from real-world applications and CTFs. Maybe in the future I would also post vulnerability disclosures.
+
 
 
