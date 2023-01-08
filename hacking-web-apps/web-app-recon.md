@@ -4,6 +4,12 @@ description: Discover assets to hack.
 
 # Web App Recon
 
+## Wordlists
+
+You can't recon without wordlists :). So download these to your machine.
+
+{% embed url="https://github.com/danielmiessler/SecLists" %}
+
 ## Subdomain Discovery
 
 For many bug bounty programs, `*.company.com` is included within the scope. So it is a great idea to enumerate through all subdomains.
