@@ -16,4 +16,4 @@ For many bug bounty programs, `*.company.com` is included within the scope. So i
 amass enum -v -config amass.ini -d company.com -dir amass4company
 ```
 
-Replace `company` with the company you are targeting.&#x20;
+Replace `company` with the company you are targeting. This command will automatically scan the domain provided and store the result within a directory called `amass4company`.
