@@ -1,0 +1,211 @@
+{
+  "name": "AMASS enumerate subdomains",
+  "nodes": [
+    {
+      "parameters": {
+        "filePath": "/home/ubuntu/domains-to-scan.txt"
+      },
+      "id": "2a0fd99f-a663-40ae-b95a-bd994ec098b2",
+      "name": "Read Binary File",
+      "type": "n8n-nodes-base.readBinaryFile",
+      "typeVersion": 1,
+      "position": [
+        700,
+        460
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "61d55741-aa0b-43b2-be89-46503fbe5a91",
+      "name": "When clicking \"Execute Workflow\"",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        260,
+        460
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Loop over input items and add a new field\n// called 'myNewField' to the JSON of each one\nreturn Buffer.from($input.first().binary.data.data, 'base64').toString().trim().split('\\n')"
+      },
+      "id": "c323a423-28fb-41b8-bd3f-eee4e086d422",
+      "name": "Split file into list of domains",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 1,
+      "position": [
+        900,
+        460
+      ]
+    },
+    {
+      "parameters": {
+        "executeOnce": false,
+        "command": "=amass enum -v -config amass.ini -d {{ $json }} -dir amass-results/{{    $json.replaceAll('.', '-')    }}"
+      },
+      "id": "a90b14b5-65cc-4d81-bf56-079bf28d46c8",
+      "name": "Execute Command",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [
+        1120,
+        460
+      ]
+    },
+    {
+      "parameters": {
+        "chatId": "5350956231",
+        "text": "=AMASS enum scan completed for {{   $(\"Split file into list of domains\").item.json   }}",
+        "additionalFields": {}
+      },
+      "id": "f06534d6-f0b6-4972-8cf2-5c9d596b668a",
+      "name": "Telegram",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1,
+      "position": [
+        1340,
+        460
+      ],
+      "credentials": {
+        "telegramApi": {
+          "id": "1",
+          "name": "Telegram account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {}
+          ]
+        }
+      },
+      "id": "a089b9e5-840f-4ebb-9f54-d38266855c65",
+      "name": "Schedule Trigger",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1,
+      "position": [
+        260,
+        680
+      ]
+    },
+    {
+      "parameters": {
+        "chatId": "5350956231",
+        "text": "=Starting AMASS domain enumeration",
+        "additionalFields": {}
+      },
+      "id": "04743626-7731-42d6-b6b4-985f5a67e4c1",
+      "name": "Send initial notification",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1,
+      "position": [
+        520,
+        460
+      ],
+      "credentials": {
+        "telegramApi": {
+          "id": "1",
+          "name": "Telegram account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "Scans every domain within `/home/ubuntu/domains-to-scan.txt` and stores amass results within `amass-results` directory.",
+        "height": 104,
+        "width": 352
+      },
+      "id": "73aeebb6-c66e-41d6-85c5-267e7baa6c29",
+      "name": "Sticky Note",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        260,
+        300
+      ]
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When clicking \"Execute Workflow\"": {
+      "main": [
+        [
+          {
+            "node": "Send initial notification",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Read Binary File": {
+      "main": [
+        [
+          {
+            "node": "Split file into list of domains",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Split file into list of domains": {
+      "main": [
+        [
+          {
+            "node": "Execute Command",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Execute Command": {
+      "main": [
+        [
+          {
+            "node": "Telegram",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "Send initial notification",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send initial notification": {
+      "main": [
+        [
+          {
+            "node": "Read Binary File",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "saveExecutionProgress": true,
+    "saveManualExecutions": true,
+    "callerPolicy": "any"
+  },
+  "versionId": "7017b744-527e-4a2a-bc18-186358f4ffab",
+  "id": 1,
+  "meta": {
+    "instanceId": "cb2de8fd9d0f06c9c35baa0fc9b023cd2060e433c6936537b70aaccdca6e20c9"
+  },
+  "tags": []
+}
