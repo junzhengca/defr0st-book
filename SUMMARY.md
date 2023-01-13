@@ -17,3 +17,4 @@
 
 * [Firelance](firelance/firelance.md)
 * [Recon](firelance/recon.md)
+* [Web Vulnerabilities](firelance/web-vulnerabilities.md)
