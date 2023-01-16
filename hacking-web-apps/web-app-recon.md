@@ -56,6 +56,22 @@ You can also scan all ports, but this would be quite slow
 sudo masscan -iL ips.txt -p- > output.txt
 ```
 
+## Content Discovery
+
+### recursebuster
+
+`recursebuster` is a really nice TUI tool for quickly scraping websites. You can do a quick scan without a wordlist for spider only.
+
+```shell
+recursebuster -iL urls.txt -o recursebuster.txt
+```
+
+Or you can also specify a wordlist to use the bruteforce mode
+
+```shell
+recursebuster -iL urls.txt -w wordlist.txt -o recursebuster.txt
+```
+
 ## n8n Workflow
 
 <figure><img src="../.gitbook/assets/CleanShot 2023-01-10 at 16.55.27.png" alt=""><figcaption><p>n8n workflow for comprehansive scan</p></figcaption></figure>
