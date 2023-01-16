@@ -47,13 +47,13 @@ You must provide a list of IP addresses, you can get it from amass output, or us
 Following command will scan top 1000 ports, which is usually pretty fast
 
 ```shell
-sudo masscan -iL ips.txt --top-ports 1000
+sudo masscan -iL ips.txt --top-ports 1000 > output.txt
 ```
 
 You can also scan all ports, but this would be quite slow
 
 ```shell
-sudo masscan -iL ips.txt -p-
+sudo masscan -iL ips.txt -p- > output.txt
 ```
 
 ## n8n Workflow
