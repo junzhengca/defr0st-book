@@ -30,7 +30,7 @@ Replace `company` with the company you are targeting. This command will automati
 It is recommended that you use a cloud VM along with `screen` when doing scans.
 {% endhint %}
 
-### httprobe
+## httprobe
 
 After getting a list of subdomains, you can check if they are HTTP servers by running `httprobe`
 
