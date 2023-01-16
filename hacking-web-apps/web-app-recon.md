@@ -72,6 +72,20 @@ Or you can also specify a wordlist to use the bruteforce mode
 recursebuster -iL urls.txt -w wordlist.txt -o recursebuster.txt
 ```
 
+## Vulnerability Scan
+
+Some common vulnerabilities can be scanned
+
+### corsy
+
+{% embed url="https://github.com/s0md3v/Corsy" %}
+
+Corsy is a tool you can use to check CORS misconfigurations, you must have a list of URLs to test.
+
+```shell
+python3 corsy.py -i urls.txt
+```
+
 ## n8n Workflow
 
 <figure><img src="../.gitbook/assets/CleanShot 2023-01-10 at 16.55.27.png" alt=""><figcaption><p>n8n workflow for comprehansive scan</p></figcaption></figure>
