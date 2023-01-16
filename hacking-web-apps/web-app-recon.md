@@ -38,6 +38,24 @@ After getting a list of subdomains, you can check if they are HTTP servers by ru
 </strong><strong>cat amass.txt | httprobe -p http:8080 -p https:8443
 </strong></code></pre>
 
+## masscan
+
+Masscan can automatically run nmap scans on a list of IP addresses. It is quite useful when testing different stuff.
+
+You must provide a list of IP addresses, you can get it from amass output, or use a tool like [https://www.infobyip.com/ipbulklookup.php](https://www.infobyip.com/ipbulklookup.php) to convert domain names to IPs.
+
+Following command will scan top 1000 ports, which is usually pretty fast
+
+```
+sudo masscan -iL ips.txt --top-ports 1000
+```
+
+You can also scan all ports, but this would be quite slow
+
+```
+sudo masscan -iL ips.txt -p-
+```
+
 ## n8n Workflow
 
 <figure><img src="../.gitbook/assets/CleanShot 2023-01-10 at 16.55.27.png" alt=""><figcaption><p>n8n workflow for comprehansive scan</p></figcaption></figure>
