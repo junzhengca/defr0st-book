@@ -36,8 +36,8 @@ Findomain offers a very fast way to enumerate subdomains. It uses various servic
 
 The most basic use of findomain is&#x20;
 
-```
-findomain -t domain.com
+```shell
+findomain -t domain.com -o output.txt
 ```
 
 ## httprobe
