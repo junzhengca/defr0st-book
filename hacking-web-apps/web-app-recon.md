@@ -30,6 +30,16 @@ Replace `company` with the company you are targeting. This command will automati
 It is recommended that you use a cloud VM along with `screen` when doing scans.
 {% endhint %}
 
+### findomain
+
+Findomain offers a very fast way to enumerate subdomains. It uses various services and have the option to connect to a Postgresql server for continuous monitoring.
+
+The most basic use of findomain is&#x20;
+
+```
+findomain -t domain.com
+```
+
 ## httprobe
 
 After getting a list of subdomains, you can check if they are HTTP servers by running `httprobe`
