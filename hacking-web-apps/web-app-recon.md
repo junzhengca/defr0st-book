@@ -66,6 +66,16 @@ You can also scan all ports, but this would be quite slow
 sudo masscan -iL ips.txt -p- > output.txt
 ```
 
+## Screenshots
+
+### EyeWitness
+
+You can use [EyeWitness](https://github.com/FortyNorthSecurity/EyeWitness) to do mass screenshots of websites
+
+```shell
+./EyeWitness.py -f input.txt --web -d eyewitness-report
+```
+
 ## Content Discovery
 
 ### recursebuster
