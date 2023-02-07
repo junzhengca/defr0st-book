@@ -18,3 +18,7 @@
 * [Firelance](firelance/firelance.md)
 * [Recon](firelance/recon.md)
 * [Web Vulnerabilities](firelance/web-vulnerabilities.md)
+
+## 🗃 Data Archives
+
+* [GitHub Archives](data-archives/github-archives.md)
