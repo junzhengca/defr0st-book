@@ -32,9 +32,7 @@ Of course, how to structure the note is completely up to you, it is just importa
 
 This is probably the easiest part, you can try to scan for alternate assets such as different directories, or do domain enumeration.
 
-{% content-ref url="web-app-recon/" %}
-[web-app-recon](web-app-recon/)
-{% endcontent-ref %}
+[subdomain-discovery.md](web-app-recon/subdomain-discovery.md "mention")
 
 ### Discover API endpoints
 
