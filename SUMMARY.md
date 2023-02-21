@@ -12,6 +12,7 @@
 * [Email Injections](hacking-web-apps/email-injections.md)
 * [Web APIs](hacking-web-apps/web-apis.md)
 * [XSS - Cross Site Scripting](hacking-web-apps/xss-cross-site-scripting.md)
+* [Web Testing Methodology](hacking-web-apps/web-testing-methodology.md)
 
 ## 🔥 Firelance
 
