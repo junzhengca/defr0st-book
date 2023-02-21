@@ -7,12 +7,13 @@
 
 ## Hacking Web Apps
 
-* [Web App Recon](hacking-web-apps/web-app-recon.md)
+* [Web App Recon](hacking-web-apps/web-app-recon/README.md)
+  * [Subdomain Discovery](hacking-web-apps/web-app-recon/subdomain-discovery.md)
 * [Use sqlmap with WebSocket](hacking-web-apps/use-sqlmap-with-websocket.md)
 * [Email Injections](hacking-web-apps/email-injections.md)
 * [Web APIs](hacking-web-apps/web-apis.md)
 * [XSS - Cross Site Scripting](hacking-web-apps/xss-cross-site-scripting.md)
-* [Web Testing Methodology](hacking-web-apps/web-testing-methodology.md)
+* [Web Hacking Methodology](hacking-web-apps/web-hacking-methodology.md)
 
 ## 🔥 Firelance
 
