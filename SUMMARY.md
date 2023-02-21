@@ -9,6 +9,8 @@
 
 * [Web App Recon](hacking-web-apps/web-app-recon/README.md)
   * [Subdomain Discovery](hacking-web-apps/web-app-recon/subdomain-discovery.md)
+  * [Web Server Discovery](hacking-web-apps/web-app-recon/web-server-discovery.md)
+  * [Screenshot Web Pages](hacking-web-apps/web-app-recon/screenshot-web-pages.md)
 * [Use sqlmap with WebSocket](hacking-web-apps/use-sqlmap-with-websocket.md)
 * [Email Injections](hacking-web-apps/email-injections.md)
 * [Web APIs](hacking-web-apps/web-apis.md)
