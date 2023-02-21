@@ -34,6 +34,10 @@ This is probably the easiest part, you can try to scan for alternate assets such
 
 [subdomain-discovery.md](web-app-recon/subdomain-discovery.md "mention")
 
+[web-server-discovery.md](web-app-recon/web-server-discovery.md "mention")
+
+[screenshot-web-pages.md](web-app-recon/screenshot-web-pages.md "mention")
+
 ### Discover API endpoints
 
 You will want to try to figure out how the API works, there are a lot of ways to do this. Just remember, it is very important to take notes!
