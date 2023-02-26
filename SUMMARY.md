@@ -17,6 +17,7 @@
 * [Web APIs](hacking-web-apps/web-apis.md)
 * [XSS - Cross Site Scripting](hacking-web-apps/xss-cross-site-scripting.md)
 * [Web Hacking Methodology](hacking-web-apps/web-hacking-methodology.md)
+* [Web Frameworks](hacking-web-apps/web-frameworks.md)
 
 ## 🔥 Firelance
 
