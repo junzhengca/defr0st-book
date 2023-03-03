@@ -4,6 +4,7 @@
 * [Linux PrivEsc](<README (1).md>)
   * [dstat](linux-privesc/dstat.md)
   * [YAML deserialization attack](linux-privesc/yaml-deserialization-attack.md)
+* [External Recon](external-recon.md)
 
 ## Hacking Web Apps
 
