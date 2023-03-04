@@ -4,11 +4,15 @@ description: Subdomain discovery methods
 
 # Subdomain Discovery
 
-## Subdomain Discovery
-
 For many bug bounty programs, `*.company.com` is included within the scope. So it is a great idea to enumerate through all subdomains.
 
-### amass
+### Fresh DNS Resolvers
+
+A list of fresh DNS resolvers are usually needed when resolving subdomains, you can use a pre-built list like the following
+
+{% embed url="https://github.com/proabiral/Fresh-Resolvers" %}
+
+amass
 
 `amass` is a great tool to enumerate domains. Usually I use this command:
 
