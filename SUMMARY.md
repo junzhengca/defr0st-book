@@ -20,6 +20,10 @@
 * [Web Hacking Methodology](hacking-web-apps/web-hacking-methodology.md)
 * [Web Frameworks](hacking-web-apps/web-frameworks.md)
 
+## Misc
+
+* [Reverse Shells](misc/reverse-shells.md)
+
 ## 🔥 Firelance
 
 * [Firelance](firelance/firelance.md)
